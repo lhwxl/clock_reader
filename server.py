@@ -5,4 +5,11 @@ app = Microdot()
 
 @app.route("/")
 def insex():
-	return "<h1>hello!</h1><hr><h2>Welcome to use the clock_reader.</h2>"
+	return "Welcome to use the clock_reader."
+
+
+@app.route("/control")
+def control(request):
+	key = request.args.get("key")
+
+	return {"status": "OK"}
